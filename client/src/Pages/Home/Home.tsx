@@ -1,9 +1,20 @@
 import React, {FC} from "react";
 import HomeNavBar from "../../Components/HomeNavBar/HomeNavBar"
+import LoginForm from "../../Components/LoginForm/LoginForm"
+import {
+    PageDiv
+} from "./HomeStyles"
 
 const Home:FC = ():JSX.Element => {
     return(
-        <HomeNavBar/>
+        <div>
+            <HomeNavBar/>
+
+            <PageDiv>
+                <LoginForm/>
+            </PageDiv>
+            
+        </div>
     )
 }
 

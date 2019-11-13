@@ -1,27 +1,32 @@
 import styled from "styled-components";
+import {
+    GLOBAL_GREEN,
+    GLOBAL_YELLOW,
+    GLOBAL_BLUE
+} from "../../Shared/styled-vars"
 
 export const Logo:any = styled.h1 `
-color:green;
+color:${GLOBAL_GREEN};
 margin:0;
 margin-left:1em;
 font-size:4em;
 `
 
 export const NavBarDiv:any=styled.div `
-background-color:yellow;
+background-color:${GLOBAL_YELLOW};
 display:flex;
 justify-content:space-around;
 `
 
 export const NavBarLink:any= styled.a `
-color:green;
+color:${GLOBAL_GREEN};
 font-size: 1.5em;
 margin:.5em;
 font-style:italic;
 
 
 &:hover{
-    color:blue;
+    color:${GLOBAL_BLUE};
 }
 `
 export const LinksDiv: any= styled.div `
