@@ -8,12 +8,13 @@ import {
 
 export const LoginDiv = styled.div `
 background-color:${GLOBAL_YELLOW};
-border: 1px solid ${GLOBAL_GREEN};
+border: 3px solid ${GLOBAL_GREEN};
 width:20%;
 
 display:flex;
 align-items:center;
 flex-direction:column;
+margin-top:2em;
 `
 
 export const LoginHeader = styled.h1 `
@@ -35,7 +36,7 @@ width:100%;
 export const LoginButton = styled.button `
 background-color:${GLOBAL_BLUE};
 padding:0.5em;
-margin:1em 0 1em 0;
+margin:1em 0 2em 0;
 border: 1px solid white;
 color:white;
 font-family:${GLOBAL_BODY_FONT};

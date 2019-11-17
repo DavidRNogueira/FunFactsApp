@@ -16,6 +16,8 @@ export const NavBarDiv:any=styled.div `
 background-color:${GLOBAL_YELLOW};
 display:flex;
 justify-content:space-around;
+
+border-bottom: 5px solid ${GLOBAL_GREEN};
 `
 
 export const NavBarLink:any= styled.a `
