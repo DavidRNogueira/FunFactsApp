@@ -2,8 +2,8 @@ import { Document } from 'mongoose';
 import { Request, Response } from 'express';
 
 // Services
-export interface IRandomFactoryService {
-  test: () => void;
+export interface IRandomFactService {
+  getRandomFact: () => IFact;
 }
 
 export interface IAuthenticationService {
@@ -26,4 +26,8 @@ export interface INewUser {
   password: string;
   confirmPassword: string;
   email: string;
+}
+
+export interface IFact {
+  text: String;
 }
