@@ -10,9 +10,9 @@ const Fact: FC = (): JSX.Element => {
           <FactText data-testid="loading-text">Fact Loading...</FactText>
         </FactTextDiv>
       </FactDiv>
-      <ButtonDiv>
-        <Button>Share</Button>
-        <Button>Next</Button>
+      <ButtonDiv data-testid="button-wrap">
+        <Button data-testid="share-btn">Share</Button>
+        <Button data-testid="next-btn">Next</Button>
       </ButtonDiv>
     </>
   );
