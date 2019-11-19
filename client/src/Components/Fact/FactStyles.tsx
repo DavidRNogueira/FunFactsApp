@@ -9,7 +9,11 @@ export const FactDiv = styled.h1 `
 `
 
 export const DidYouKnow = styled.h1 `
-opacity:0.7;
+opacity:0.5;
+font-size:1.5em;
+@media (max-width:900px){
+    font-size:1.5em;
+}
 `
 
 export const FactText = styled.p `

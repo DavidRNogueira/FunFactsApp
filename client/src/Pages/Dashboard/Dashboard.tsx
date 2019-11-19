@@ -4,6 +4,7 @@ import {Route,Router} from "react-router-dom";
 import {history} from "../../App"
 import Fact from "../../Components/Fact/Fact"
 import { LogoDiv, Logo } from "./DashboardStyles";
+import Activity from "../Activity/Activity";
 
 
 
@@ -17,6 +18,7 @@ const Dashboard:FC = ():JSX.Element =>{
         <DashboardOptions/>
         <Router history={history}>
             <Route path ="/dashboard/fact" component={Fact}/>   
+            <Route path ="/dashboard/activity" component={Activity}/>
         </Router>
         </div>
         

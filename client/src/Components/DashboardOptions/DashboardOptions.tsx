@@ -3,7 +3,6 @@ import {
     OptionsDiv,
     Options,
  } from "./DashboardOptionsStyles"
-import { Link } from "react-router-dom"
 
 const DashboardOptions:FC = ():JSX.Element =>{
 
@@ -11,10 +10,10 @@ const DashboardOptions:FC = ():JSX.Element =>{
 
     return(
         <OptionsDiv>
-            <Options><Link to ="/dashboard/fact">Explore Fun Facts!</Link></Options>
-            <Options><Link to="/">Your Friends' Activity</Link></Options>
-            <Options><Link to="/">Manage Friends</Link></Options>
-            <Options><Link to="/">Settings</Link></Options>   
+            <Options href="/dashboard/fact">Explore Fun Facts!</Options>
+            <Options href="/dashboard/activity">Your Friends' Activity</Options>
+            <Options>Manage Friends</Options>
+            <Options>Settings</Options>   
         </OptionsDiv>
     )
 }
