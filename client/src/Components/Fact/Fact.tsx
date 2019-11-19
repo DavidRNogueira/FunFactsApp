@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {FC, useState} from "react"
 import { 
     DidYouKnow,
@@ -47,3 +48,26 @@ const Fact:FC = ():JSX.Element =>{
 }
 
 export default Fact
+=======
+import React, { FC } from 'react';
+import { DidYouKnow, FactText, Button, FactDiv, ButtonDiv, FactTextDiv } from './FactStyles';
+
+const Fact: FC = (): JSX.Element => {
+  return (
+    <>
+      <FactDiv>
+        <DidYouKnow>Did you know?</DidYouKnow>
+        <FactTextDiv>
+          <FactText data-testid="loading-text">Fact Loading...</FactText>
+        </FactTextDiv>
+      </FactDiv>
+      <ButtonDiv data-testid="button-wrap">
+        <Button data-testid="share-btn">Share</Button>
+        <Button data-testid="next-btn">Next</Button>
+      </ButtonDiv>
+    </>
+  );
+};
+
+export default Fact;
+>>>>>>> bd2f53b55319face96d6ce7f0d2cf71a2b29ce70
