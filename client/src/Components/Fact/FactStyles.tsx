@@ -3,26 +3,17 @@ import { GLOBAL_BLUE, GLOBAL_BODY_FONT } from '../../Shared/styled-vars';
 
 export const FactDiv = styled.div`
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: auto;
   flex-direction: column;
   font-size: 2em;
   margin: 0.67em 0;
 `;
 
-<<<<<<< HEAD
-export const DidYouKnow = styled.h1 `
-opacity:0.5;
-font-size:1.5em;
-@media (max-width:900px){
-    font-size:1.5em;
-}
-`
-=======
 export const DidYouKnow = styled.h1`
   opacity: 0.7;
+  margin-left:1em;
 `;
->>>>>>> bd2f53b55319face96d6ce7f0d2cf71a2b29ce70
 
 export const FactText = styled.p`
 align-self:center;

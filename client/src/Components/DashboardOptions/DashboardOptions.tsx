@@ -2,19 +2,24 @@ import React,{FC} from "react"
 import { 
     OptionsDiv,
     Options,
+    LogoDiv,
+    Logo,
  } from "./DashboardOptionsStyles"
-
+ 
 const DashboardOptions:FC = ():JSX.Element =>{
-
-    
-
     return(
+        <div>
+        <LogoDiv>
+             <Logo>FunFacts!</Logo>
+        </LogoDiv>  
         <OptionsDiv>
-            <Options href="/dashboard/fact">Explore Fun Facts!</Options>
-            <Options href="/dashboard/activity">Your Friends' Activity</Options>
-            <Options>Manage Friends</Options>
-            <Options>Settings</Options>   
+            <Options to= "/dashboard/fact">Explore Fun Facts!</Options>
+            <Options to="/dashboard/activity">Your Friends' Activity</Options>
+            <h1>Manage Friends</h1>
+            <h1>Settings</h1>   
         </OptionsDiv>
+    
+        </div>
     )
 }
 
