@@ -7,11 +7,11 @@ import {
 
 const Home:FC = ():JSX.Element => {
     return(
-        <div>
-            <HomeNavBar/>
+        <div data-testid="home-div">
+            <HomeNavBar data-testid="home-navbar"/>
 
             <PageDiv>
-                <LoginForm/>
+                <LoginForm data-testid="form"/>
             </PageDiv>
             
         </div>

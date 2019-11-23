@@ -28,4 +28,5 @@ describe('Fact Component', () => {
     expect(buttonWrap).toContainElement(nextBtn);
     expect(buttonWrap).toContainElement(shareBtn);
   });
+
 });
