@@ -10,14 +10,14 @@ import {
 
 const LoginForm:FC = ():JSX.Element =>{
     return(
-        <LoginDiv>
-            <LoginHeader>Login</LoginHeader>
+        <LoginDiv data-testid="login-form">
+            <LoginHeader data-testid="header">Login</LoginHeader>
             <Form>
-            <FormLabels>Username</FormLabels>
+            <FormLabels data-testid="username">Username</FormLabels>
             <TextInput type="text"/>
-            <FormLabels>Password</FormLabels>
+            <FormLabels data-testid="password">Password</FormLabels>
             <TextInput type="text"/>
-            <LoginButton>Login</LoginButton>
+            <LoginButton data-testid="submit-btn">Login</LoginButton>
             </Form>
            
         </LoginDiv>
