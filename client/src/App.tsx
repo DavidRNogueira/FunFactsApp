@@ -14,7 +14,7 @@ const App:FC = (): JSX.Element =>{
     <Router history={history}>
       <Route exact path="/" component={Home}/>
       <Router history={history}>
-        <DashboardOptions/>
+        <Route path = "/dashboard" component={DashboardOptions}/>
         <Route exact path="/dashboard" component={Dashboard}/>
         <Route path ="/dashboard/fact" component={Fact}/>   
         <Route path ="/dashboard/activity" component={Activity}/>
