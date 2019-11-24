@@ -4,11 +4,24 @@ import axios from "axios"
 
 const Fact: FC = (): JSX.Element => {
 
+  window.addEventListener("keydown", (e)=>{
+    if(e.key === "ArrowRight"){
+      handleNext();
+    }
+  })
+
   const [fact,factUpdated] = useState("Click Next to get started!")
 
   const handleNext = () =>{
     axios.get("/random-fact")
-    .then(response => factUpdated(response.data.text))
+    .then(response => {
+      if(response.data.text === undefined){
+        return (factUpdated("Woops! Try Again"))
+      }
+
+      factUpdated(response.data.text)
+      
+    } )
   }
 
   return (
