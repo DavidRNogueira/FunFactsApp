@@ -10,19 +10,15 @@ beforeEach(()=>{
 
 afterEach(cleanup);
 
-it("contain the navbar",()=>{
+it("contain the navbar and form",()=>{
     const homeDiv = container.getByTestId("home-div")
     const homeNavBar = container.getByTestId("home-navbar")
-
-    expect(homeDiv).toContainElement(homeNavBar)
-})
-
-it("contain the login form",()=>{
-    const homeDiv = container.getByTestId("home-div")
     const form = container.getByTestId("form")
 
     expect(homeDiv).toContainElement(form)
+    expect(homeDiv).toContainElement(homeNavBar)
 })
+1
 
 
 
