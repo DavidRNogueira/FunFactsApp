@@ -26,8 +26,13 @@ text-align:center;
     font-size:1.8em;
 }
 
+&:visited{
+    font-size:1.75em;
+
+}
+
 @media (max-width: 900px){
-    font-size:1em;
+    font-size:1.25em;
 }
 `
 

@@ -15,8 +15,8 @@ const DashboardOptions:FC = ():JSX.Element =>{
         <OptionsDiv>
             <Options to= "/dashboard/fact">Explore Fun Facts!</Options>
             <Options to="/dashboard/activity">Your Friends' Activity</Options>
-            <h1>Manage Friends</h1>
-            <h1>Settings</h1>   
+            <Options to ="/dashboard/manage-friends">Manage Friends</Options>
+            <Options to ="/dashboard/settings">Settings</Options>   
         </OptionsDiv>
     
         </div>
