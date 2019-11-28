@@ -14,14 +14,8 @@ const Fact: FC = (): JSX.Element => {
 
   const handleNext = () =>{
     axios.get("/random-fact")
-    .then(response => {
-      if(response.data.text === undefined){
-        return (factUpdated("Woops! Try Again"))
-      }
-
-      factUpdated(response.data.text)
-      
-    } )
+    .then(response => factUpdated(response.data.text))  
+    
   }
 
   return (

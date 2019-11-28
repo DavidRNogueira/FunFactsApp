@@ -7,12 +7,18 @@ export const FactDiv = styled.div`
   margin: auto;
   flex-direction: column;
   font-size: 2em;
-  margin: 0.67em 0;
+ 
 `;
 
 export const DidYouKnow = styled.h1`
   opacity: 0.7;
   margin-left:1em;
+
+  @media(max-width:450px){
+    font-size:1.5em;
+    align-self:center;
+    margin:1em 0 0 0;
+  }
 `;
 
 export const FactText = styled.p`

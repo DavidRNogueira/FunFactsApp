@@ -4,8 +4,10 @@ import {Route,Router} from "react-router-dom";
 import {createBrowserHistory} from "history"
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Fact from './Components/Fact/Fact';
-import Activity from './Pages/Activity/Activity';
+import Activity from './Components/Activity/Activity';
 import DashboardOptions from './Components/DashboardOptions/DashboardOptions';
+import ManageFriends from './Components/ManageFriends/ManageFriends';
+import Settings from './Components/Settings/Settings';
 
 export const history = createBrowserHistory();
 
@@ -18,6 +20,8 @@ const App:FC = (): JSX.Element =>{
         <Route exact path="/dashboard" component={Dashboard}/>
         <Route path ="/dashboard/fact" component={Fact}/>   
         <Route path ="/dashboard/activity" component={Activity}/>
+        <Route path = "/dashboard/manage-friends" component ={ManageFriends}/>
+        <Route path ="/dashboard/settings" component={Settings}/>
       </Router>
     </Router>
   

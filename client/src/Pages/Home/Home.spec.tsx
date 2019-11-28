@@ -12,8 +12,8 @@ afterEach(cleanup);
 
 it("contain the navbar and form",()=>{
     const homeDiv = container.getByTestId("home-div")
-    const homeNavBar = container.getByTestId("home-navbar")
-    const form = container.getByTestId("form")
+    const homeNavBar = container.getByTestId("navbar")
+    const form = container.getByTestId("login-form")
 
     expect(homeDiv).toContainElement(form)
     expect(homeDiv).toContainElement(homeNavBar)

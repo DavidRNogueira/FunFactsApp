@@ -10,12 +10,12 @@ import {
 const NavBar:FC = (): JSX.Element =>{
 
     return(
-        <NavBarDiv>
-        <Logo>FunFacts!</Logo>
+        <NavBarDiv data-testid="navbar">
+        <Logo data-testid="name-header">FunFacts!</Logo>
         
             <LinksDiv>
-                <NavBarLink>Create Account</NavBarLink>
-                <NavBarLink>Get Help</NavBarLink>
+                <NavBarLink data-testid="create-account">Create Account</NavBarLink>
+                <NavBarLink data-testid="get-help">Get Help</NavBarLink>
             </LinksDiv>
        
         </NavBarDiv>

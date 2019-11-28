@@ -18,7 +18,7 @@ describe('Fact Component', () => {
     }
 
     expect(loadingDiv).toBeInTheDocument();
-    expect(loadingDiv.innerHTML).toBe('Fact Loading...');
+    expect(loadingDiv.innerHTML).toBe('Click Next to get started!');
   });
 
   it('Should display both buttons in button wrap', () => {
