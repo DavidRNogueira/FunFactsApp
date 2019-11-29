@@ -2,7 +2,7 @@ import passport from 'passport';
 import * as passportLocal from 'passport-local';
 import User from '../models/User';
 import { Request, Response } from 'express';
-import { INewUser, IAuthenticationService } from '../types/server';
+import { INewUser, IAuthenticationService, IUserDetails } from '../types/server';
 
 export default class AuthenticationService implements IAuthenticationService {
   public static setup() {
@@ -64,5 +64,20 @@ export default class AuthenticationService implements IAuthenticationService {
     } else if (!req.user) {
       res.json({ loggedIn: false });
     }
+  }
+  //I need to fetch username, first name, last name, profile image.
+  // I am making a report bug form so we need that to get handled. And then eventually, to be able to load the user's list of friends.
+
+  public getUserDetails(req: Request, res: Response): void {
+    // Dummy data for now
+    const user: IUserDetails = {
+      firstName: 'Joe',
+      lastName: 'Test',
+      profileImage:
+        'https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/74841947_2605151892874435_9175000564684029952_o.jpg?_nc_cat=107&_nc_ohc=ya_77nUReLEAQmStsbUcV49JZ5tYzCgAKXs9lHL6zXA_FayHiJ9oDr3Ag&_nc_ht=scontent-dfw5-1.xx&oh=094a5647b712ef7538778a253ec61746&oe=5E7B1EB3',
+      friends: ['Steven', 'Other Joe', 'Jim'],
+    };
+
+    res.send(user);
   }
 }
