@@ -6,6 +6,7 @@ display:flex;
 justify-content:center;
 flex-wrap:wrap;
 flex-direction:row;
+margin-top:3em;
 `
 
 export const MyPhoto = styled.input `

@@ -5,12 +5,16 @@ import {
     LogoDiv,
     Logo,
  } from "./DashboardOptionsStyles"
+import { Link } from "react-router-dom"
  
 const DashboardOptions:FC = ():JSX.Element =>{
     return(
         <div>
         <LogoDiv>
-             <Logo>FunFacts!</Logo>
+            <Link to="/dashboard">
+            <Logo>FunFacts!</Logo>
+            </Link>
+             
         </LogoDiv>  
         <OptionsDiv>
             <Options to= "/dashboard/fact">Explore Fun Facts!</Options>

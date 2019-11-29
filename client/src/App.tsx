@@ -8,21 +8,25 @@ import Activity from './Components/Activity/Activity';
 import DashboardOptions from './Components/DashboardOptions/DashboardOptions';
 import ManageFriends from './Components/ManageFriends/ManageFriends';
 import Settings from './Components/Settings/Settings';
+import EditProfile from './Components/EditProfile/EditProfile';
+import ReportBug from './Components/ReportBug/ReportBug';
+import SuggestFact from './Components/SuggestFact/SuggestFact';
 
 export const history = createBrowserHistory();
 
 const App:FC = (): JSX.Element =>{
   return(
     <Router history={history}>
-      <Route exact path="/" component={Home}/>
-      <Router history={history}>
+        <Route exact path="/" component={Home}/>
         <Route path = "/dashboard" component={DashboardOptions}/>
         <Route exact path="/dashboard" component={Dashboard}/>
         <Route path ="/dashboard/fact" component={Fact}/>   
         <Route path ="/dashboard/activity" component={Activity}/>
         <Route path = "/dashboard/manage-friends" component ={ManageFriends}/>
         <Route path ="/dashboard/settings" component={Settings}/>
-      </Router>
+        <Route path ="/dashboard/edit-profile" component={EditProfile}/>
+        <Route path = "/dashboard/report-bug" component={ReportBug}/>
+        <Route path = "/dashboard/suggest-fact" component={SuggestFact}/>
     </Router>
   
   )

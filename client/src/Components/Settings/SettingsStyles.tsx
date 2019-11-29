@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export const SettingsDiv = styled.div `
 display:flex;
@@ -21,4 +22,8 @@ font-size:2em;
 export const SettingsOptionDescription = styled.p `
 color:grey;
 font-size:1em;
+`
+
+export const StyledLink = styled(Link) `
+color:black;
 `

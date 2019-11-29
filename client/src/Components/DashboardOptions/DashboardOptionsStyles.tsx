@@ -22,10 +22,6 @@ color:${GLOBAL_YELLOW};
 font-size:1.75em;
 text-align:center;
 
-&:hover{
-    font-size:1.8em;
-}
-
 &:visited{
     font-size:1.75em;
 
@@ -47,6 +43,7 @@ export const LogoDiv = styled.div `
 background-color:${GLOBAL_YELLOW};
 display:flex;
 justify-content:center;
+
 `
 
 export const Logo = styled.h1 `
