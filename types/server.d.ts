@@ -11,6 +11,7 @@ export interface IAuthenticationService {
   handleLogin: (req: Request, res: Response) => void;
   logout: (req: Request, res: Response) => void;
   checkLogin: (req: Request, res: Response) => void;
+  getUserDetails: (req: Request, res: Response) => void;
 }
 
 // Models
@@ -30,4 +31,11 @@ export interface INewUser {
 
 export interface IFact {
   text: String;
+}
+
+export interface IUserDetails {
+  firstName: string;
+  lastName: string;
+  profileImage: string;
+  friends: Array<string>;
 }
