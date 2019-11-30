@@ -49,3 +49,17 @@ display:flex;
 flex-direction:row;
 justify-content:space-evenly;
 `
+export const ListedSourceDiv = styled.div `
+display:flex;
+flex-direction:row;
+`
+
+export const ListedSourceButton = styled.button `
+margin-left:1em;
+border-radius:3px;
+`
+
+export const DuplicateError = styled.h3 `
+font-size:1em;
+color:red;
+`

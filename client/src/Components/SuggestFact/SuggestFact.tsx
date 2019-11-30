@@ -1,30 +1,34 @@
 import React,{FC, useState} from "react"
-import { SuggestFactHeader, SuggestFactDiv, TextArea, TextAreaLabel, SubmitButton, SuggestFactParagraph, AddSourceBtn, AddSourceDiv, AddSourceInput } from "./SuggestFactStyles"
+import { SuggestFactHeader, SuggestFactDiv, TextArea, TextAreaLabel, SubmitButton, SuggestFactParagraph, AddSourceBtn, AddSourceDiv, AddSourceInput, ListedSourceDiv, ListedSourceButton, DuplicateError } from "./SuggestFactStyles"
 
 const SuggestFact:FC = (): JSX.Element =>{
 
-    //Problem #1: If source is repeated, key is duplicated and error is thrown.
-    //Problem #2: How to clear input at button click?
+const [input, setInput] = useState<string>('')
+const [sources, setNewSources] = useState<string[]>([]);
+const [isDuplicate, setIsDuplicate] = useState<boolean>(false)
 
-const [input, setInput] = useState('')
-const [sources, setNewSources] = useState();
-
-const sourcesMapped:any = sources ? sources.map((source:string) => 
-<li key ={sources.indexOf(source)}>{source}</li>)
+const sourcesMapped:any = sources ? sources.map((source:string) =>
+<ListedSourceDiv key ={source}>
+<li >{source}</li>
+<ListedSourceButton>X</ListedSourceButton>
+</ListedSourceDiv> 
+)
 :
 "Please add sources"
 
 const handleClick = (e:any) =>{
-        if (sources === undefined){
-        return(setNewSources([input]))
+    if(sources.includes(input)){
+        return setIsDuplicate(true)
     }
+    setIsDuplicate(false)
     setNewSources(() => [...sources,input])
-    
+    setInput('')    
 }
 
 const handleChange = (e:any) =>{
     setInput(e.target.value);
 }
+
     return(
         <SuggestFactDiv>
 
@@ -48,9 +52,11 @@ const handleChange = (e:any) =>{
             </ul>           
 
             <AddSourceDiv>
-            <AddSourceInput type='text' onChange={handleChange}/>
+            <AddSourceInput value={input} type='text' onChange={handleChange}/>
             <AddSourceBtn onClick={(e:any) => handleClick(e)}>Add</AddSourceBtn>
             </AddSourceDiv>
+
+            {isDuplicate && <DuplicateError>Your have already added that source.</DuplicateError>}
             
            
 
