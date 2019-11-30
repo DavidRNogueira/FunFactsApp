@@ -4,10 +4,11 @@ import { ActivityDiv, PostDiv, PostImage, PostUsername, FactText } from "./Activ
 
 const Activity:FC = ():JSX.Element =>{
     return(
-        <div>
-        <MyInfo/>
+        
+       
 
         <ActivityDiv>
+             <MyInfo/>
             <PostDiv>
                 <PostImage/>
                 <PostUsername>David Nogueira</PostUsername>
@@ -20,7 +21,7 @@ const Activity:FC = ():JSX.Element =>{
                 <FactText>Dolphins are smart</FactText>
             </PostDiv>
         </ActivityDiv>
-        </div>
+       
         
     )
 }

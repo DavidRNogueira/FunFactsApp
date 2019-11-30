@@ -5,7 +5,8 @@ margin:1em auto;
 display:flex;
 flex-direction:column;
 width:50%;
-`
+margin:auto;`
+
 export const PostDiv = styled.div `
 display:flex;
 flex-direction:column;

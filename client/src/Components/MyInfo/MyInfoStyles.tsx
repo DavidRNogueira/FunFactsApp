@@ -1,17 +1,19 @@
 import styled from "styled-components"
 
 export const MyInfoDiv = styled.div `
-width:90%;
+width:50%;
 display:flex;
-justify-content:center;
-flex-wrap:wrap;
+justify-content:space-around;
 flex-direction:row;
-margin-top:3em;
+margin:2em auto 2em auto;
 `
 
 export const MyPhoto = styled.input `
-width:20em;
+width:12em;
+border-radius:10px;
 `
 export const MyName = styled.h1 `
+font-size:3em;
 font-weight: bold;
+align-self:center;
 `

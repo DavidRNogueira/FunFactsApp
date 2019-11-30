@@ -48,7 +48,7 @@ const handleChange = (e:any) =>{
             </ul>           
 
             <AddSourceDiv>
-            <AddSourceInput id="addSourceInput" type='text' onChange={handleChange}/>
+            <AddSourceInput type='text' onChange={handleChange}/>
             <AddSourceBtn onClick={(e:any) => handleClick(e)}>Add</AddSourceBtn>
             </AddSourceDiv>
             

@@ -27,8 +27,8 @@ width:100%
 `
 
 export const EditProfileImage = styled.input `
-width:10m;
-margin:2em auto;
+width:12em;
+margin: auto;
 `
 
 export const StyledButton = styled.button `
