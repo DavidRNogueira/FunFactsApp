@@ -1,4 +1,4 @@
-import React,{FC} from "react";
+import React,{FC, useEffect, useState} from "react";
 import { 
     EditProfileDiv,
     EditProfileHeader,
@@ -9,22 +9,39 @@ import {
     StyledButton,
     ButtonDiv
  } from "./EditProfileStyles";
+import Axios from "axios";
 
 const EditProfile:FC = ():JSX.Element =>{
+
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [profileImage, setProfileImage] = useState('')
+
+
+    useEffect(()=>{
+        Axios.get('/authenticate/user-details')
+        .then(response =>{ 
+            const {firstName,lastName,profileImage} = response.data
+            setFirstName(firstName);
+            setLastName(lastName)
+            setProfileImage(profileImage)
+        })    
+    })
+    
     return(
         <EditProfileDiv>
             <EditProfileHeader>Edit My Profile</EditProfileHeader>
 
-            <EditProfileImage type="image" alt="Your Profile Image"/>
+            <EditProfileImage src={profileImage} type="image" alt="Your Profile Image"/>
 
             <InputDiv>
                 <StyledLabel>First Name:</StyledLabel>
-                <StyledInput type="text"/>
+                <StyledInput defaultValue={firstName} type="text"/>
             </InputDiv>
 
             <InputDiv>
                 <StyledLabel>Last Name:</StyledLabel>
-                <StyledInput type="text"/>
+                <StyledInput defaultValue={lastName} type="text"/>
             </InputDiv>
 
             <InputDiv>
