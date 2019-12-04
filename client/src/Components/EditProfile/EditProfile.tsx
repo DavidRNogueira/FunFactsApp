@@ -7,15 +7,17 @@ import {
     StyledLabel,
     EditProfileImage,
     StyledButton,
-    ButtonDiv
+    ButtonDiv,
+    FileInput
  } from "./EditProfileStyles";
 import Axios from "axios";
 
 const EditProfile:FC = ():JSX.Element =>{
 
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [profileImage, setProfileImage] = useState('')
+    const [firstName, setFirstName] = useState<string>('')
+    const [lastName, setLastName] = useState<string>('')
+    const [profileImage, setProfileImage] = useState<string>('')
+    const [username, setUsername] = useState<string>('')
 
 
     useEffect(()=>{
@@ -26,32 +28,46 @@ const EditProfile:FC = ():JSX.Element =>{
             setLastName(lastName)
             setProfileImage(profileImage)
         })    
-    })
+    },
+    [])
+
+    const handleChange = (e:any) =>{
+        let reader = new FileReader();
+        reader.readAsDataURL(e.currentTarget.files[0]);
+        reader.onloadend = () => {
+            setProfileImage(reader.result as string)
+        }
+    }
     
+   const handleSave = () =>{
+       console.log(username,firstName,lastName,profileImage)
+   }
+
     return(
         <EditProfileDiv>
             <EditProfileHeader>Edit My Profile</EditProfileHeader>
 
-            <EditProfileImage src={profileImage} type="image" alt="Your Profile Image"/>
+            <EditProfileImage src={profileImage} alt="Your Profile Image" />
+            <FileInput onChange={(e:any) => handleChange(e)} type="file" accept="image/*" capture/>
 
             <InputDiv>
                 <StyledLabel>First Name:</StyledLabel>
-                <StyledInput defaultValue={firstName} type="text"/>
+                <StyledInput onChange={(e:any) =>setFirstName(e.target.value)} defaultValue={firstName} type="text"/>
             </InputDiv>
 
             <InputDiv>
                 <StyledLabel>Last Name:</StyledLabel>
-                <StyledInput defaultValue={lastName} type="text"/>
+                <StyledInput onChange={(e:any) =>setLastName(e.target.value)} defaultValue={lastName} type="text"/>
             </InputDiv>
 
             <InputDiv>
                 <StyledLabel>Username:</StyledLabel>
-                <StyledInput type="text"/>
+                <StyledInput onChange={(e:any) =>setUsername(e.target.value)} type="text"/>
             </InputDiv>
             
             <ButtonDiv>
                 <StyledButton>Cancel</StyledButton>
-                <StyledButton>Save</StyledButton>
+                <StyledButton onClick={handleSave}>Save</StyledButton>
             </ButtonDiv>
         </EditProfileDiv>
 

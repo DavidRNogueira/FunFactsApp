@@ -31,3 +31,8 @@ font-size:1.5em;
 align-self:center;
 `
 
+export const YourFriendsActivity = styled.h3 `
+font-size:2em;
+margin-bottom:0.25em;
+`
+

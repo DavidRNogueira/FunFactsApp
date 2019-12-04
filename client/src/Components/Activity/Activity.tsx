@@ -1,6 +1,6 @@
 import React,{FC} from "react"
 import MyInfo from "../MyInfo/MyInfo"
-import { ActivityDiv, PostDiv, PostImage, PostUsername, FactText } from "./ActivityStyles"
+import { ActivityDiv, PostDiv, PostImage, PostUsername, FactText, YourFriendsActivity } from "./ActivityStyles"
 
 const Activity:FC = ():JSX.Element =>{
     return(
@@ -9,6 +9,7 @@ const Activity:FC = ():JSX.Element =>{
 
         <ActivityDiv>
              <MyInfo/>
+             <YourFriendsActivity>Your Friends' Activity</YourFriendsActivity>
             <PostDiv>
                 <PostImage/>
                 <PostUsername>David Nogueira</PostUsername>

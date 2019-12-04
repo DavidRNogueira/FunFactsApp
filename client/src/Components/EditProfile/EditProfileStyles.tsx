@@ -26,9 +26,14 @@ export const StyledInput = styled.input `
 width:100%
 `
 
-export const EditProfileImage = styled.input `
-width:12em;
+export const EditProfileImage = styled.img `
+width:10em;
 margin: auto;
+`
+export const FileInput = styled.input `
+color:${GLOBAL_BLUE};
+align-self:center;
+width:10em;
 `
 
 export const StyledButton = styled.button `
