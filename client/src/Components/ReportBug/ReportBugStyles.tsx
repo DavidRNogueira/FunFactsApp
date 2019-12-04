@@ -17,9 +17,9 @@ export const TextAreaLabel = styled.label `
 font-size: 1.5em;
 `
 
-export const TextArea = styled.input `
+export const TextArea = styled.textarea `
 width:100%;
-height:10em;
+font-size:12pt;
 `
 
 export const SubmitButton = styled.button `

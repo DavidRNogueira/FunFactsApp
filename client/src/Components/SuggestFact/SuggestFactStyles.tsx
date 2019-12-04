@@ -17,9 +17,9 @@ export const TextAreaLabel = styled.label `
 font-size: 1.5em;
 `
 
-export const TextArea = styled.input `
+export const TextArea = styled.textarea `
 width:100%;
-height:10em;
+font-size:12pt;
 `
 
 export const SubmitButton = styled.button `
@@ -57,9 +57,15 @@ flex-direction:row;
 export const ListedSourceButton = styled.button `
 margin-left:1em;
 border-radius:3px;
+height:50%;
+align-self:center;
 `
 
 export const DuplicateError = styled.h3 `
 font-size:1em;
 color:red;
+`
+
+export const ListItem = styled.li `
+margin:0.5em;
 `

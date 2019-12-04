@@ -15,7 +15,7 @@ const ReportBug:FC = (): JSX.Element =>{
                 </ul>
             </ReportBugParagraph>
             <TextAreaLabel>Describe the problem:</TextAreaLabel>
-            <TextArea type="text"/>
+            <TextArea></TextArea>
             <SubmitButton>Submit</SubmitButton>
         </ReportBugDiv>
     )

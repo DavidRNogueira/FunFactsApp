@@ -1,5 +1,5 @@
 import React,{FC, useState} from "react"
-import { SuggestFactHeader, SuggestFactDiv, TextArea, TextAreaLabel, SubmitButton, SuggestFactParagraph, AddSourceBtn, AddSourceDiv, AddSourceInput, ListedSourceDiv, ListedSourceButton, DuplicateError } from "./SuggestFactStyles"
+import { SuggestFactHeader, SuggestFactDiv, TextArea, TextAreaLabel, SubmitButton, SuggestFactParagraph, AddSourceBtn, AddSourceDiv, AddSourceInput, ListedSourceDiv, ListedSourceButton, DuplicateError, ListItem } from "./SuggestFactStyles"
 
 const SuggestFact:FC = (): JSX.Element =>{
 
@@ -8,11 +8,11 @@ const [sources, setNewSources] = useState<string[]>([]);
 const [isDuplicate, setIsDuplicate] = useState<boolean>(false)
 
 const sourcesMapped:any = sources ? sources.map((source:string) =>
-<ListedSourceDiv key ={source}>
-<li >{source}</li>
-<ListedSourceButton>X</ListedSourceButton>
-</ListedSourceDiv> 
-)
+    <ListedSourceDiv key ={source}>
+        <ListItem >{source}</ListItem>
+        <ListedSourceButton onClick={(e:any) => handleDelete(source)}>X</ListedSourceButton>
+    </ListedSourceDiv> 
+    )
 :
 "Please add sources"
 
@@ -29,6 +29,11 @@ const handleChange = (e:any) =>{
     setInput(e.target.value);
 }
 
+const handleDelete = (e:string) =>{
+    let newSourcesList = sources.filter(source => e !== source)
+    setNewSources(newSourcesList)
+}
+
     return(
         <SuggestFactDiv>
 
@@ -43,7 +48,7 @@ const handleChange = (e:any) =>{
             </ul>
 
             <TextAreaLabel>Fun Fact:</TextAreaLabel>
-            <TextArea type="text"/>
+            <TextArea></TextArea>
 
             <TextAreaLabel>Sources</TextAreaLabel>
 
