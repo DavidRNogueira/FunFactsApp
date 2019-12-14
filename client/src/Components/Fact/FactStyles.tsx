@@ -7,7 +7,6 @@ export const FactDiv = styled.div`
   margin: auto;
   flex-direction: column;
   font-size: 2em;
- 
 `;
 
 export const DidYouKnow = styled.h1`

@@ -1,21 +1,37 @@
-import React,{FC} from "react"
+import React,{FC, useState} from "react"
 import { 
     OptionsDiv,
     Options,
     LogoDiv,
     Logo,
+    NoNotifications,
+    Notifications,
+    NotificationsButton,
+    LogoLink,
  } from "./DashboardOptionsStyles"
-import { Link } from "react-router-dom"
  
 const DashboardOptions:FC = ():JSX.Element =>{
+
+    const [notifications, setNotifications] = useState<Boolean>(false)
+
+    // Notification button to be replaced by icon
+    
     return(
-        <div>
+        <>
         <LogoDiv>
-            <Link to="/dashboard">
-            <Logo>FunFacts!</Logo>
-            </Link>
-             
-        </LogoDiv>  
+            <LogoLink to='/dashboard'>
+                <Logo>FunFacts!</Logo>
+            </LogoLink>
+             <NotificationsButton onClick={(e:any)=>setNotifications(!notifications)}>
+                 Notifications
+            </NotificationsButton>
+        </LogoDiv> 
+
+        {notifications &&
+        <Notifications>
+                <NoNotifications>No Notifications</NoNotifications>
+        </Notifications>}
+
         <OptionsDiv>
             <Options to= "/dashboard/fact">Explore Fun Facts!</Options>
             <Options to="/dashboard/activity">Your Friends' Activity</Options>
@@ -23,7 +39,7 @@ const DashboardOptions:FC = ():JSX.Element =>{
             <Options to ="/dashboard/settings">Settings</Options>   
         </OptionsDiv>
     
-        </div>
+        </>
     )
 }
 

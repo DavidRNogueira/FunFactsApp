@@ -42,12 +42,44 @@ opacity:0.6;
 export const LogoDiv = styled.div `
 background-color:${GLOBAL_YELLOW};
 display:flex;
-justify-content:center;
-
+justify-content:space-between;
+align-items:center;
 `
 
 export const Logo = styled.h1 `
 color:${GLOBAL_GREEN};
 font-size:3em;
-margin:0;
+margin:0.2em 0 0.2em 1em;
+`
+export const NotificationsButton = styled.button `
+margin-right:1em;
+font-size:1.5em;
+background-color:${GLOBAL_BLUE};
+border:0;
+color:white;
+padding:0.2em;
+border-radius:5px;
+
+:hover{
+    background-color:blue;
+}
+`
+export const Notifications = styled.div `
+background-color:#f8f8f8;
+border:1px solid black
+position:absolute;
+right:0;
+z-index:1;
+width:35%
+`
+
+export const NoNotifications = styled.h1 `
+color:grey;
+text-align:center
+`
+
+export const LogoLink = styled(Link) `
+display:flex;
+justify-content:space-between;
+align-items:center;
 `

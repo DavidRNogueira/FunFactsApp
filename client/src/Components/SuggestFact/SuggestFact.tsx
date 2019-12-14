@@ -10,7 +10,7 @@ const [isDuplicate, setIsDuplicate] = useState<boolean>(false)
 const sourcesMapped:any = sources ? sources.map((source:string) =>
     <ListedSourceDiv key ={source}>
         <ListItem >{source}</ListItem>
-        <ListedSourceButton onClick={(e:any) => handleDelete(source)}>X</ListedSourceButton>
+        <ListedSourceButton onClick={(e:any) => handleDelete(source)}>Delete</ListedSourceButton>
     </ListedSourceDiv> 
     )
 :

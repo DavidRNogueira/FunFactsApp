@@ -6,6 +6,7 @@ display:flex;
 flex-direction:column;
 width:70%;
 margin:auto;
+padding-bottom:3em;
 `
 
 export const EditProfileHeader = styled.h1 `

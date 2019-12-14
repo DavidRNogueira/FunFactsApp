@@ -6,6 +6,8 @@ display:flex;
 flex-direction:column;
 width:50%;
 margin:auto;
+padding-bottom:3em;
+
 `
 
 export const SuggestFactHeader = styled.h1 `
@@ -18,8 +20,9 @@ font-size: 1.5em;
 `
 
 export const TextArea = styled.textarea `
-width:100%;
+width:80%;
 font-size:12pt;
+align-self:left;
 `
 
 export const SubmitButton = styled.button `
@@ -36,8 +39,10 @@ export const SuggestFactParagraph = styled.p `
 font-size:1.25em;
 `
 export const AddSourceBtn = styled.button `
-background-color:grey;
+background-color:#F8F8F8;
 width:5em;
+border-radius:3px;
+margin-left:0.2em;
 `
 
 export const AddSourceInput = styled.input `
@@ -47,7 +52,7 @@ width:80%;
 export const AddSourceDiv = styled.div `
 display:flex;
 flex-direction:row;
-justify-content:space-evenly;
+justify-content:flex-start;
 `
 export const ListedSourceDiv = styled.div `
 display:flex;
