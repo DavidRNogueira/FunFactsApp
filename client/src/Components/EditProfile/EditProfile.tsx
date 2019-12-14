@@ -17,7 +17,6 @@ const EditProfile:FC = ():JSX.Element =>{
     const [firstName, setFirstName] = useState<string>('')
     const [lastName, setLastName] = useState<string>('')
     const [profileImage, setProfileImage] = useState<string>('')
-    const [username, setUsername] = useState<string>('')
 
 
     useEffect(()=>{
@@ -38,36 +37,32 @@ const EditProfile:FC = ():JSX.Element =>{
             setProfileImage(reader.result as string)
         }
     }
-    
-   const handleSave = () =>{
-       console.log(username,firstName,lastName,profileImage)
-   }
 
     return(
         <EditProfileDiv>
             <EditProfileHeader>Edit My Profile</EditProfileHeader>
 
             <EditProfileImage src={profileImage} alt="Your Profile Image" />
-            <FileInput onChange={(e:any) => handleChange(e)} type="file" accept="image/*" capture/>
+            <FileInput onChange={(e:React.FormEvent<HTMLInputElement>) => handleChange(e)} type="file" accept="image/*" capture/>
 
             <InputDiv>
                 <StyledLabel>First Name:</StyledLabel>
-                <StyledInput onChange={(e:any) =>setFirstName(e.target.value)} defaultValue={firstName} type="text"/>
+                <StyledInput onChange={(e:React.FormEvent<HTMLInputElement>) =>setFirstName(e.currentTarget.value)} defaultValue={firstName} type="text"/>
             </InputDiv>
 
             <InputDiv>
                 <StyledLabel>Last Name:</StyledLabel>
-                <StyledInput onChange={(e:any) =>setLastName(e.target.value)} defaultValue={lastName} type="text"/>
+                <StyledInput onChange={(e:React.FormEvent<HTMLInputElement>) =>setLastName(e.currentTarget.value)} defaultValue={lastName} type="text"/>
             </InputDiv>
 
             <InputDiv>
                 <StyledLabel>Username:</StyledLabel>
-                <StyledInput onChange={(e:any) =>setUsername(e.target.value)} type="text"/>
+                <StyledInput type="text"/>
             </InputDiv>
             
             <ButtonDiv>
                 <StyledButton>Cancel</StyledButton>
-                <StyledButton onClick={handleSave}>Save</StyledButton>
+                <StyledButton>Save</StyledButton>
             </ButtonDiv>
         </EditProfileDiv>
 

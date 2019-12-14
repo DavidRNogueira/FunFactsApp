@@ -6,6 +6,8 @@ display:flex;
 flex-direction:column;
 width:50%;
 margin:auto;
+padding-bottom:3em;
+
 `
 
 export const ReportBugHeader = styled.h1 `
