@@ -1,13 +1,12 @@
 import React,{FC, useState} from "react"
 import { 
-    OptionsDiv,
-    Options,
     LogoDiv,
     Logo,
     NoNotifications,
     Notifications,
     NotificationsButton,
     LogoLink,
+    Icons,
  } from "./DashboardOptionsStyles"
  
 const DashboardOptions:FC = ():JSX.Element =>{
@@ -22,23 +21,24 @@ const DashboardOptions:FC = ():JSX.Element =>{
             <LogoLink to='/dashboard'>
                 <Logo>FunFacts!</Logo>
             </LogoLink>
-             <NotificationsButton onClick={(e:any)=>setNotifications(!notifications)}>
-                 Notifications
-            </NotificationsButton>
+                    <Icons to="/dashboard/fact">
+                        <i className="fas fa-search"></i>
+                    </Icons>
+                    <Icons to="/dashboard/activity">
+                        <i className="fas fa-user-friends"></i>
+                    </Icons>
+                    <Icons to="/dashboard/settings">
+                        <i className="fas fa-cogs"></i>
+                    </Icons>
+                    <NotificationsButton onClick={(e:any)=>setNotifications(!notifications)}>
+                        <i className="fas fa-bell"></i>
+                    </NotificationsButton>
         </LogoDiv> 
 
         {notifications &&
         <Notifications>
                 <NoNotifications>No Notifications</NoNotifications>
         </Notifications>}
-
-        <OptionsDiv>
-            <Options to= "/dashboard/fact">Explore Fun Facts!</Options>
-            <Options to="/dashboard/activity">Your Friends' Activity</Options>
-            <Options to ="/dashboard/manage-friends">Manage Friends</Options>
-            <Options to ="/dashboard/settings">Settings</Options>   
-        </OptionsDiv>
-    
         </>
     )
 }

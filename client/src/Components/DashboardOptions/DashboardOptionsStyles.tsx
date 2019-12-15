@@ -6,41 +6,9 @@ import {
 } from "../../Shared/styled-vars"
 import {Link} from "react-router-dom"
 
-export const OptionsDiv = styled.div `
-background-color:${GLOBAL_GREEN};
-padding:1em;
-display:flex;
-flex-direction:row;
-justify-content:space-around;
-flex-wrap:wrap;
-
-
-`
-
-export const Options = styled(Link) `
-color:${GLOBAL_YELLOW};
-font-size:1.75em;
-text-align:center;
-
-&:visited{
-    font-size:1.75em;
-
-}
-
-@media (max-width: 900px){
-    font-size:1.25em;
-}
-`
-
-export const StyledHr = styled.hr `
-margin:1em;
-width:80%;
-color:${GLOBAL_BLUE}
-border:1px solid ${GLOBAL_BLUE};
-opacity:0.6;
-`
 export const LogoDiv = styled.div `
 background-color:${GLOBAL_YELLOW};
+border-bottom: 10px solid ${GLOBAL_GREEN}
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -53,15 +21,15 @@ margin:0.2em 0 0.2em 1em;
 `
 export const NotificationsButton = styled.button `
 margin-right:1em;
-font-size:1.5em;
-background-color:${GLOBAL_BLUE};
+font-size:2em;
+background-color:${GLOBAL_YELLOW};
 border:0;
-color:white;
+color:${GLOBAL_BLUE};
 padding:0.2em;
-border-radius:5px;
+border-radius:20px;
 
 :hover{
-    background-color:blue;
+    background-color:yellow;
 }
 `
 export const Notifications = styled.div `
@@ -82,4 +50,18 @@ export const LogoLink = styled(Link) `
 display:flex;
 justify-content:space-between;
 align-items:center;
+`
+
+export const Icons = styled(Link) `
+margin-right:1em;
+font-size:2em;
+background-color:${GLOBAL_YELLOW};
+border:0;
+color:${GLOBAL_BLUE};
+padding:0.2em;
+border-radius:20px;
+
+:hover{
+    background-color:yellow;
+}
 `
