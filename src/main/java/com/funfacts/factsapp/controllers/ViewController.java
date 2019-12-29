@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ViewController {
   final String htmlLocation = "../static/build/index";
 
-  @GetMapping("/")
+  @GetMapping({"/", "/dashboard", "/dashboard/fact", "/dashboard/activity",
+      "/dashboard/manage-friends", "/dashboard/settings", "/dashboard/edit-profile",
+      "/dashboard/report-bug", "/dashboard/suggest-fact"})
   public String getView() {
     return htmlLocation;
   }
