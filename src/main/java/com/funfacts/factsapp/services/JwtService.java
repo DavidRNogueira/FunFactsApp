@@ -3,6 +3,6 @@ package com.funfacts.factsapp.services;
 import io.jsonwebtoken.Claims;
 
 public interface JwtService {
-  String createJWT(String id, String issuer, String subject, long ttlMillis);
+  String createJWT(String username);
   Claims decodeJWT(String jwt);
 }

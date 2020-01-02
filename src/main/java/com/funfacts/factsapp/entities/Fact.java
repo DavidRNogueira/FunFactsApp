@@ -1,11 +1,17 @@
 package com.funfacts.factsapp.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "fact")
@@ -33,6 +39,10 @@ public class Fact {
   @Column(name = "approved")
   private int approved; // 0 not approved/ 1 is approved (Could change to boolean ?)
 
+  @OneToMany(mappedBy="fact", cascade={CascadeType.ALL})
+  @JsonManagedReference
+  private Set<ArticleReference> references;
+
   public Fact() { };
 
   public Fact(String content, String category, String image, int shares, String dateSuggested) {
@@ -42,6 +52,14 @@ public class Fact {
     this.shares = shares;
     this.dateSuggested = dateSuggested;
     this.approved = 0;
+  }
+
+  public void addReference(ArticleReference reference) {
+    if (references == null) {
+      references = new HashSet<>();
+    }
+    references.add(reference);
+    reference.setFact(this);
   }
 
   public int getId() {
@@ -98,5 +116,13 @@ public class Fact {
 
   public void setApproved(int approved) {
     this.approved = approved;
+  }
+
+  public Set<ArticleReference> getReferences() {
+    return references;
+  }
+
+  public void setReferences(Set<ArticleReference> references) {
+    this.references = references;
   }
 }

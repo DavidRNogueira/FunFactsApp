@@ -1,6 +1,7 @@
 package com.funfacts.factsapp.services.impl;
 
 import com.funfacts.factsapp.services.JwtService;
+import com.funfacts.factsapp.shared.Constants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -15,7 +16,7 @@ import java.util.Date;
 @Service
 public class JwtServiceImpl implements JwtService {
   @Override
-  public String createJWT(String id, String issuer, String subject, long ttlMillis) {
+  public String createJWT(String username) {
 
     SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
 
@@ -26,17 +27,13 @@ public class JwtServiceImpl implements JwtService {
     byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(System.getenv("JWT_KEY"));
     Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 
-    JwtBuilder builder = Jwts.builder().setId(id)
+    JwtBuilder builder = Jwts.builder().setId(username)
         .setIssuedAt(now)
-        .setSubject(subject)
-        .setIssuer(issuer)
         .signWith(signatureAlgorithm, signingKey);
 
-    if (ttlMillis > 0) {
-      long expMillis = nowMillis + ttlMillis;
-      Date exp = new Date(expMillis);
-      builder.setExpiration(exp);
-    }
+    long expMillis = nowMillis + Constants.LOGIN_DURATION;
+    Date exp = new Date(expMillis);
+    builder.setExpiration(exp);
 
     return builder.compact();
   }
