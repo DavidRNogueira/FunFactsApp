@@ -1,10 +1,14 @@
 package com.funfacts.factsapp.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +30,11 @@ public class Comment {
 
   @Column(name = "last_name")
   private String lastName;
+
+  @ManyToOne
+  @JoinColumn(name = "post_fk")
+  @JsonBackReference
+  private Post post;
 
   public Comment() { };
 
@@ -74,5 +83,13 @@ public class Comment {
 
   public void setLastName(String lastName) {
     this.lastName = lastName;
+  }
+
+  public Post getPost() {
+    return post;
+  }
+
+  public void setPost(Post post) {
+    this.post = post;
   }
 }

@@ -1,10 +1,14 @@
 package com.funfacts.factsapp.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +21,11 @@ public class ArticleReference {
 
   @Column(name = "article_link")
   private String articleLink;
+
+  @ManyToOne
+  @JoinColumn(name = "fact_fk")
+  @JsonBackReference
+  private Fact fact;
 
   public ArticleReference() { };
 
@@ -38,5 +47,13 @@ public class ArticleReference {
 
   public void setArticleLink(String articleLink) {
     this.articleLink = articleLink;
+  }
+
+  public Fact getFact() {
+    return fact;
+  }
+
+  public void setFact(Fact fact) {
+    this.fact = fact;
   }
 }

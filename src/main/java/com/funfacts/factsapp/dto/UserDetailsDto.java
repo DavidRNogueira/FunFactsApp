@@ -2,26 +2,24 @@ package com.funfacts.factsapp.dto;
 
 import com.funfacts.factsapp.entities.User;
 
-import java.util.Date;
-
-public class RegisterDto {
+public class UserDetailsDto {
   private String username;
   private String avatar;
-  private String password;
   private String firstName;
   private String lastName;
   private String email;
+  private String dateJoined;
+  private String jwt;
 
-  public User mapToUserEntity() {
-    User user = new User();
-    user.setUsername(getUsername());
-    user.setAvatar(getAvatar());
-    user.setPassword(getPassword());
-    user.setFirstName(getFirstName());
-    user.setLastName(getLastName());
-    user.setEmail(getEmail());
-    user.setDateJoined(new Date().toString());
-    return user;
+  public UserDetailsDto() { }
+
+  public UserDetailsDto(User user) {
+    setUsername(user.getUsername());
+    setAvatar(user.getAvatar());
+    setFirstName(user.getFirstName());
+    setLastName(user.getLastName());
+    setEmail(user.getEmail());
+    setDateJoined(user.getDateJoined());
   }
 
   public String getUsername() {
@@ -38,14 +36,6 @@ public class RegisterDto {
 
   public void setAvatar(String avatar) {
     this.avatar = avatar;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
   }
 
   public String getFirstName() {
@@ -70,5 +60,21 @@ public class RegisterDto {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getDateJoined() {
+    return dateJoined;
+  }
+
+  public void setDateJoined(String dateJoined) {
+    this.dateJoined = dateJoined;
+  }
+
+  public String getJwt() {
+    return jwt;
+  }
+
+  public void setJwt(String jwt) {
+    this.jwt = jwt;
   }
 }

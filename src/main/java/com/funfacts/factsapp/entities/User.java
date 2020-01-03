@@ -1,13 +1,18 @@
 package com.funfacts.factsapp.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -35,6 +40,11 @@ public class User {
   @Column(name = "date_joined")
   private String dateJoined;
 
+  @OneToMany(mappedBy="user", cascade={CascadeType.ALL})
+  @JsonManagedReference
+  private Set<Post> posts;
+
+
   public User() { }
 
   public User(String username, String avatar, String password, String firstName, String lastName, String email) {
@@ -45,6 +55,14 @@ public class User {
     this.lastName = lastName;
     this.email = email;
     this.dateJoined = new Date().toString();
+  }
+
+  public void addPost(Post post) {
+    if (posts == null) {
+      posts = new HashSet<>();
+    }
+    posts.add(post);
+    post.setUser(this);
   }
 
   public String getUsername() {
@@ -68,7 +86,7 @@ public class User {
   }
 
   public void setPassword(String password) {
-    this.password = password;
+    this.password = new BCryptPasswordEncoder().encode(password);;
   }
 
   public String getFirstName() {
@@ -101,5 +119,13 @@ public class User {
 
   public void setDateJoined(String dateJoined) {
     this.dateJoined = dateJoined;
+  }
+
+  public Set<Post> getPosts() {
+    return posts;
+  }
+
+  public void setPosts(Set<Post> posts) {
+    this.posts = posts;
   }
 }

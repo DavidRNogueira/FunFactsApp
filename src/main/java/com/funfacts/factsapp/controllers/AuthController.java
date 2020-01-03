@@ -1,8 +1,12 @@
 package com.funfacts.factsapp.controllers;
 
+import com.funfacts.factsapp.dto.LoginDto;
 import com.funfacts.factsapp.dto.RegisterDto;
+import com.funfacts.factsapp.dto.UserDetailsDto;
 import com.funfacts.factsapp.entities.User;
 import com.funfacts.factsapp.services.JwtService;
+import com.funfacts.factsapp.services.LoginService;
+import com.funfacts.factsapp.services.RegistrationService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,19 +15,23 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-  final private JwtService jwtService;
+  final private RegistrationService registrationService;
+  final private LoginService loginService;
 
-  public AuthController(final JwtService jwtService) {
-    this.jwtService = jwtService;
+  public AuthController(final RegistrationService registrationService, final LoginService loginService) {
+    this.registrationService = registrationService;
+    this.loginService = loginService;
   }
 
   @PostMapping("/login")
-  public User login() {
-    return null;
+  public UserDetailsDto login(@RequestBody LoginDto loginDto) {
+    UserDetailsDto userDetails = loginService.login(loginDto);
+    return userDetails;
   }
 
   @PostMapping("/register")
-  public User register(@RequestBody RegisterDto registerDto) {
-    return null;
+  public UserDetailsDto register(@RequestBody RegisterDto registerDto) {
+    UserDetailsDto userDetails = registrationService.registerUser(registerDto);
+    return userDetails;
   }
 }

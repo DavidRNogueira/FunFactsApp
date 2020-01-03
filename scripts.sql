@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `username` varchar(45) UNIQUE,
   `avatar` varchar(500) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL,
+  `password` varchar(200) DEFAULT NULL,
   `first_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(55) DEFAULT NULL,
   `email` varchar(55) DEFAULT NULL,
