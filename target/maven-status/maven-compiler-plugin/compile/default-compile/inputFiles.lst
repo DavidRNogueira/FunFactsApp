@@ -1,1 +1,23 @@
-/Users/rbertram/Code/java/FunFactsApp/factsapp/src/main/java/com/funfacts/factsapp/DemoApplication.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/dto/LoginDto.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/entities/ReportedBug.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/services/impl/RegistrationServiceImpl.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/config/WebConfig.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/FunFactsApp.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/entities/Fact.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/services/LoginService.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/services/RegistrationService.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/services/JwtService.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/entities/Post.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/dto/UserDetailsDto.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/controllers/ViewController.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/controllers/AuthController.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/entities/ArticleReference.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/filters/AuthFilter.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/entities/User.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/services/impl/LoginServiceImpl.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/dto/RegisterDto.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/shared/Constants.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/dao/impl/UserDaoImpl.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/dao/UserDao.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/services/impl/JwtServiceImpl.java
+/Users/davidnogueira/Documents/My Projects/FunFacts/FunFactsApp/src/main/java/com/funfacts/factsapp/entities/Comment.java

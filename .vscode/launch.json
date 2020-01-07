@@ -1,14 +1,17 @@
 {
-  "configurations": [
-    {
-      "type": "java",
-      "name": "Spring Boot-FunFactsApp<factsapp>",
-      "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "console": "internalConsole",
-      "mainClass": "com.funfacts.factsapp.FunFactsApp",
-      "projectName": "factsapp",
-      "args": ""
+  "configurations": [{
+    "type": "java",
+    "name": "Spring Boot-FunFactsApp<factsapp>",
+    "request": "launch",
+    "cwd": "${workspaceFolder}",
+    "console": "internalConsole",
+    "mainClass": "com.funfacts.factsapp.FunFactsApp",
+    "projectName": "factsapp",
+    "args": "",
+    "env": {
+      "DB_URL": "jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_ace980be5ce41ed?reconnect=true",
+      "DB_USER": "b6883cfbed95d6",
+      "DB_PASS": "d66e26dc"
     }
-  ]
+  }]
 }
