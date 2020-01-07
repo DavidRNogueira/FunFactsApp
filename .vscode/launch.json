@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-FunFactsApp<factsapp>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.funfacts.factsapp.FunFactsApp",
+      "projectName": "factsapp",
+      "args": ""
+    }
+  ]
+}
