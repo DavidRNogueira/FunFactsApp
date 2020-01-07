@@ -2,3 +2,5 @@ node_modules
 .env
 yarn-error.log
 build
+.vscode
+launch.json
