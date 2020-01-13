@@ -22,6 +22,7 @@ const EditProfile:FC = ():JSX.Element =>{
     useEffect(()=>{
         Axios.get('/authenticate/user-details')
         .then(response =>{ 
+            console.log(response)
             const {firstName,lastName,profileImage} = response.data
             setFirstName(firstName);
             setLastName(lastName)
@@ -29,6 +30,33 @@ const EditProfile:FC = ():JSX.Element =>{
         })    
     },
     [])
+
+    
+      const handleSave = (e:any) =>{
+        console.log('Clicked')
+        const payload = {
+            firstName: firstName,
+            lastName: lastName,
+            profileImage:profileImage,
+        }
+
+        Axios.post("/authenticate/register", {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: { "Content-Type": "application/json" },
+            credentials: "same-origin"
+        })
+            .then(res => {
+            if (res.status === 200) {
+                console.log('Success!')
+                return res;
+            }
+            })
+            .then(data => {
+            console.log(data);
+            });
+      }
+       
 
     const handleChange = (e:any) =>{
         let reader = new FileReader();
@@ -62,7 +90,7 @@ const EditProfile:FC = ():JSX.Element =>{
             
             <ButtonDiv>
                 <StyledButton>Cancel</StyledButton>
-                <StyledButton>Save</StyledButton>
+                <StyledButton onClick={handleSave}>Save</StyledButton>
             </ButtonDiv>
         </EditProfileDiv>
 
