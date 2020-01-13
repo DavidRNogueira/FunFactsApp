@@ -68,7 +68,7 @@ const LoginForm:FC = ():JSX.Element =>{
             email
         }
         try {
-            const response = await Axios.put('/auth/login', payload)
+            const response = await Axios.put('/auth/register', payload)
             if (response.status === 200){
                 setIsRegistering(false);
                 setIsCreated(true);
