@@ -14,6 +14,7 @@ import {
 import Axios from "axios";
 import {useDispatch} from "react-redux"
 import { history } from "../../App";
+import {setUserInfo} from '../../Actions/allActions'
 
 const LoginForm:FC = ():JSX.Element =>{
 
@@ -39,10 +40,6 @@ const LoginForm:FC = ():JSX.Element =>{
     try {
         const response = await Axios.post("/auth/login", payload)
         if (response.status === 200){
-            dispatch({
-                type:"SET_USER_INFO",
-                payload
-            })
             history.push('/dashboard')
         }
     }
@@ -68,7 +65,7 @@ const LoginForm:FC = ():JSX.Element =>{
             email
         }
         try {
-            const response = await Axios.put('/auth/register', payload)
+            const response = await Axios.post('/auth/register', payload)
             if (response.status === 200){
                 setIsRegistering(false);
                 setIsCreated(true);
