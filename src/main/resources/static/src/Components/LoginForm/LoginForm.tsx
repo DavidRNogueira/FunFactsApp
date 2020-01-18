@@ -14,7 +14,7 @@ import {
 import Axios from "axios";
 import {useDispatch} from "react-redux"
 import { history } from "../../App";
-import {setUserInfo} from '../../Actions/allActions'
+import allActions from '../../Actions'
 
 const LoginForm:FC = ():JSX.Element =>{
 
@@ -31,6 +31,7 @@ const LoginForm:FC = ():JSX.Element =>{
     const dispatch = useDispatch();
 
     const handleLogin = async (event: React.FormEvent<HTMLButtonElement>) =>{
+        event.preventDefault();
         let errors:string[] = []
         const payload = {
             username,
@@ -40,11 +41,13 @@ const LoginForm:FC = ():JSX.Element =>{
     try {
         const response = await Axios.post("/auth/login", payload)
         if (response.status === 200){
+            dispatch({type:"SET_USER_INFO", payload})
             history.push('/dashboard')
         }
     }
     catch(error){
         errors.push("unknown")
+        console.log('error')
     } 
 }
 
@@ -75,7 +78,7 @@ const LoginForm:FC = ():JSX.Element =>{
             errors.push("unknown")
         }
         
-            if(errors.length > 0){
+            if (errors.length > 0){
             setErrors(errors)
                 }
     }
@@ -92,7 +95,7 @@ const LoginForm:FC = ():JSX.Element =>{
                 <TextInput type="text" onChange={(e:React.FormEvent<HTMLInputElement>) => setUsername(e.currentTarget.value)}/>
                 
                 <FormLabels data-testid="password">Password</FormLabels>
-                <TextInput type="text" onChange={(e:React.FormEvent<HTMLInputElement>) => setPassword(e.currentTarget.value)}/>
+                <TextInput type="password" onChange={(e:React.FormEvent<HTMLInputElement>) => setPassword(e.currentTarget.value)}/>
               
                     <PrimaryButton  data-testid="submit-btn" onClick={(e:React.FormEvent<HTMLButtonElement>) => handleLogin(e)}>Login</PrimaryButton>
                     <SecondaryButton onClick={(e:React.FormEvent<HTMLButtonElement>) => setIsRegistering(true)}>Create Account</SecondaryButton>
@@ -126,10 +129,10 @@ const LoginForm:FC = ():JSX.Element =>{
                 <TextInput type="text" onChange={(e:React.FormEvent<HTMLInputElement>) => setUsername(e.currentTarget.value)}/>
                 
                 <FormLabels data-testid="password">Password</FormLabels>
-                <TextInput type="text" onChange={(e:React.FormEvent<HTMLInputElement>) => setPassword(e.currentTarget.value)}/>
+                <TextInput type="password" onChange={(e:React.FormEvent<HTMLInputElement>) => setPassword(e.currentTarget.value)}/>
                 
                 <FormLabels data-testid="password">Confirm Password</FormLabels>
-                <TextInput type="text" onChange={(e:React.FormEvent<HTMLInputElement>) => setConfirmPassword(e.currentTarget.value)}/>
+                <TextInput type="password" onChange={(e:React.FormEvent<HTMLInputElement>) => setConfirmPassword(e.currentTarget.value)}/>
                 {
                     errors.includes('password') && <Error>Your passwords do not match.</Error>
                 }

@@ -1,8 +1,13 @@
-import {createStore} from "redux"
+import {useStore} from "react-redux"
 import rootReducer from "./Reducers/index"
 
 const initialState = {}
-const store = createStore(rootReducer,initialState)
+const store = useStore(rootReducer,initialState)
 
 export default store
+
+
+
+
+
 

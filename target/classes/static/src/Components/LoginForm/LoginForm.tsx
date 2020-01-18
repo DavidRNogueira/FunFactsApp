@@ -14,7 +14,7 @@ import {
 import Axios from "axios";
 import {useDispatch} from "react-redux"
 import { history } from "../../App";
-import {setUserInfo} from '../../Actions/allActions'
+import allActions from '../../Actions'
 
 const LoginForm:FC = ():JSX.Element =>{
 
@@ -31,6 +31,7 @@ const LoginForm:FC = ():JSX.Element =>{
     const dispatch = useDispatch();
 
     const handleLogin = async (event: React.FormEvent<HTMLButtonElement>) =>{
+        event.preventDefault();
         let errors:string[] = []
         const payload = {
             username,
@@ -40,11 +41,13 @@ const LoginForm:FC = ():JSX.Element =>{
     try {
         const response = await Axios.post("/auth/login", payload)
         if (response.status === 200){
+            dispatch({type:"SET_USER_INFO", payload})
             history.push('/dashboard')
         }
     }
     catch(error){
         errors.push("unknown")
+        console.log('error')
     } 
 }
 
@@ -75,7 +78,7 @@ const LoginForm:FC = ():JSX.Element =>{
             errors.push("unknown")
         }
         
-            if(errors.length > 0){
+            if (errors.length > 0){
             setErrors(errors)
                 }
     }

@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 import {
     HeaderDiv,
     Welcome,
@@ -6,9 +6,11 @@ import {
     FactOfDayDiv,
     FactOfDayHeader
 } from "./DashboardStyles"
+import {useSelector} from "react-redux"
 
 const Dashboard:FC = ():JSX.Element =>{
-
+    const username = useSelector((state:any) => state.user)
+    console.log(username)
     return(
         <div>
         <HeaderDiv>

@@ -2,38 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f190d13f-5e96-4e5f-be97-da77d04981b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/davidnogueira.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/src/Actions/userActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/..env.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.README.md.icloud" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/FunFactsApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/FunFactsApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/controllers/ViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/controllers/ViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dao/impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dto/LoginDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dto/LoginDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dto/RegisterDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dto/RegisterDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dto/UserDetailsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/dto/UserDetailsDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/ArticleReference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/ArticleReference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/Fact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/Fact.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/ReportedBug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/ReportedBug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/filters/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/filters/AuthFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/JwtService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/RegistrationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/RegistrationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/impl/JwtServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/impl/JwtServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/impl/RegistrationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/services/impl/RegistrationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/shared/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/funfacts/factsapp/shared/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/factsapp-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/factsapp-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/factsapp-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/factsapp-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/funfacts/factsapp/FunFactsAppTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/funfacts/factsapp/FunFactsAppTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.server.ts.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tsconfig.json.icloud" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/src/Actions/allActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/src/Actions/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/src/Components/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/src/Components/LoginForm/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/src/Pages/Dashboard/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/src/Pages/Dashboard/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/src/store.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/src/store.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/src/Actions/allActions.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/src/Components/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/src/Components/LoginForm/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/src/Pages/Dashboard/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/src/Pages/Dashboard/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +52,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1WMkLRVv3cglb11h1xoAmaDK4LH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -129,6 +116,14 @@
       <option name="presentableId" value="Default" />
       <updated>1577594322079</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit">
+      <created>1578969431943</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578969431943</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,11 +131,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="masterDetails">
     <states>
